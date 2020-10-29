@@ -1,10 +1,10 @@
 package com.example.unitconverter
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.unitconverter.databinding.ActivityMainBinding
-import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,5 +14,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        val recyclerView = dataBinding.rvUnitList
+        val manager = GridLayoutManager(applicationContext, 3)
+        recyclerView.layoutManager = manager
+        recyclerView.adapter = UnitsAdapter()
     }
 }
