@@ -2,11 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="120dp"
-    android:layout_height="120dp"
-    android:layout_marginEnd="8dp"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
     android:layout_marginBottom="8dp"
-    android:elevation="4dp"
     app:cardBackgroundColor="@color/primaryColor"
     app:cardCornerRadius="16dp">
 
@@ -17,12 +15,11 @@
         <ImageView
             android:id="@+id/im_icon"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_margin="16dp"
-
             tools:src="@drawable/ic_baseline_directions_bike_24" />
 
         <TextView
@@ -30,14 +27,12 @@
             style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="16dp"
             android:textColor="@color/primaryTextColor"
             app:layout_constraintStart_toStartOf="@id/im_icon"
             app:layout_constraintTop_toBottomOf="@id/im_icon"
             app:layout_constraintEnd_toEndOf="@id/im_icon"
-            android:layout_margin="16dp"
-            tools:text="Data Transfer Rate" />
+            tools:text="Speed" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

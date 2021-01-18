@@ -19,7 +19,7 @@
                 app:expandedTitleMarginBottom="28dp"
                 app:expandedTitleMarginStart="50dp"
                 app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:layout_scrollFlags="exitUntilCollapsed|snap"
                 app:statusBarScrim="?attr/colorPrimaryVariant">
 
                 <com.google.android.material.appbar.MaterialToolbar
@@ -37,14 +37,14 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
+            android:paddingTop="16dp"
+            android:paddingStart="16dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_unit_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="8dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:spanCount="3"
                 tools:listitem="@layout/unit_list_item" />
